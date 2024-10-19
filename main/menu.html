@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Apartment System</title>
+</head>
+<body>
+
+
+    <section id="content">
+        <nav class="navbar">
+            <img class="logo" src="img/logo2.png" alt="">
+           <input type="checkbox" id="toggeler">
+           <label for="toggeler"><i class='bx bx-menu'></i></label>
+           <div class="menu">
+            <ul class="list">
+                <li><a onclick="showHome ()" href="#">Home</a></li>
+                <li><a onclick="showHistory ()" href="#">History</a></li>
+                <li><a onclick="showTeam ()" href="#">My Team</a></li>
+            </ul>
+           </div>
+        </nav>
+
+        <main>
+            <div id="homeContent">
+                <ul class="info-card">
+                    <li>
+                        <i class='bx bxs-home'></i>
+                        <span class="text">
+                            <h3 id="nRooms">0</h3>
+                            <p>Rooms</p>
+                        </span>
+                    </li>
+                    <li>
+                        <i class='bx bxs-group' ></i>
+                        <span class="text">
+                            <h3 id="tenant">69</h3>
+                            <p>Tenants</p>
+                        </span>
+                    </li>
+                </ul>                
+               
+                <div class="table-data" id="table-data">
+                    <div class="order">
+                        <div class="head">
+                            <h3>LIST ROOMS</h3>
+                            <i class='bx bx-plus' id="addTenantBtn"></i>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tenants</th>
+                                    <th>Date Order</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tenant-table-body">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+ <div class="team-section" id="teamContent" style="display: none;">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <div id="details">
+                <img src="jb.jpg" alt="">
+                <h3>JB Lazaro</h3>
+                <p>Programmer</p>
+            </div>
+            <div class="btn">
+                <a href="https://www.facebook.com/julianb.lazaro/"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div id="details">
+                <img src="img/cessi.jpg" alt="">
+                <h3>Cessi Macabero</h3>
+                <p>Programmer</p>
+            </div>
+            <div class="btn">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div id="details">
+                <img src="img/renill.jpg" alt="">
+                <h3>Renill Rentoy</h3>
+                <p>Designer</p>
+            </div>
+            <div class="btn">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div id="details">
+                <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-1/428683685_122166994592083867_2240288814988517288_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF4ZHC4ATcN7bhOL6SGN6qzxIM4A2rl4ATEgzgDauXgBBa3tFUdVO8vs6P8CRkn22_V9_vBhozosSk3WWkdMKyT&_nc_ohc=gu2jwHUjO_4Q7kNvgF9CLfl&_nc_ht=scontent.fmnl13-1.fna&_nc_gid=Az2uFMd74Zt7bjNEhWHyexi&oh=00_AYDriBTXJcpEKdFFVIH1gnin0OoW3y_ud_7LtbVbWS9fqw&oe=670152A4" alt="">
+                <h3>Jasper Cristobal</h3>
+                <p>Documentary</p>
+            </div>
+            <div class="btn">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <div id="details">
+                <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/161592680_317993236416333_931774493589611058_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFuMS6t_eclAwBtHl6jZj2wlLGs1XbnlR2UsazVdueVHbqOvGAP4dMmSkyyCfQ_rzM240Tu9FZ0uFp6Hi2xQXga&_nc_ohc=8kOBdr9t8PoQ7kNvgG8RJ0r&_nc_ht=scontent.fmnl13-2.fna&oh=00_AYBFO1WmfCP6E56Jlv1ZpXr6Wn8JaWq412wQqTQBspXzbA&oe=67230947" alt="">
+                <h3>AJ Delos Reyes</h3>
+                <p>Member</p>
+            </div>
+            <div class="btn">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="activity" id="historyContent" style="display: none;">
+                <div class="order">
+                    <div class="head">
+                        <h3>Recently Edited and Deleted</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Tenant Name</th>
+                                <th>Date</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activity-table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </section>
+
+
+<div id="addTenantModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeAddModal">&times;</span>
+        <h2>Add Tenant</h2>
+        <form id="addTenantForm">
+            <label for="tenantName">Name:</label>
+            <input type="text" id="tenantName" required>
+            <label for="tenantDate">Date:</label>
+            <input type="date" id="tenantDate" required>
+            <label for="tenantStatus">Status:</label>
+            <select id="tenantStatus" required>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <label for="tenantContact">Contact Number:</label>
+            <input type="text" id="tenantContact" required>
+            <label for="tenantAge">Age:</label>
+            <input type="number" id="tenantAge" required>
+            <label for="tenantGender">Gender:</label>
+            <select id="tenantGender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="tenantAddress">Address:</label>
+            <input type="text" id="tenantAddress" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="editTenantModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeEditModal">&times;</span>
+        <h2>Edit Tenant</h2>
+        <form id="editTenantForm">
+            <input type="hidden" id="editTenantIndex">
+            <label for="editTenantName">Name:</label>
+            <input type="text" id="editTenantName" required>
+            <label for="editTenantDate">Date:</label>
+            <input type="date" id="editTenantDate" required>
+            <label for="editTenantStatus">Status:</label>
+            <select id="editTenantStatus" required>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <label for="editTenantContact">Contact Number:</label>
+            <input type="text" id="editTenantContact" required>
+            <label for="editTenantAge">Age:</label>
+            <input type="number" id="editTenantAge" required>
+            <label for="editTenantGender">Gender:</label>
+            <select id="editTenantGender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="editTenantAddress">Address:</label>
+            <input type="text" id="editTenantAddress" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="viewTenantModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeViewModal">&times;</span>
+        <h2>Tenant Information</h2>
+        <p><strong>Name:</strong> <span id="viewTenantName"></span></p>
+        <p><strong>Date:</strong> <span id="viewTenantDate"></span></p>
+        <p><strong>Status:</strong> <span id="viewTenantStatus"></span></p>
+        <p><strong>Contact Number:</strong> <span id="viewTenantContact"></span></p>
+        <p><strong>Age:</strong> <span id="viewTenantAge"></span></p>
+        <p><strong>Gender:</strong> <span id="viewTenantGender"></span></p>
+        <p><strong>Address:</strong> <span id="viewTenantAddress"></span></p>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
